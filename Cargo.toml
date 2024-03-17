@@ -8,4 +8,5 @@ default = ["burn/default"]
 
 [dependencies]
 burn = { version = "0.12.1", features = ["train", "wgpu", "vision"] }
+clap = { version = "4.5.3", features = ["derive"] }
 
