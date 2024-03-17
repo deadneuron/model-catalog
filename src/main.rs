@@ -12,7 +12,7 @@ struct Args {
 #[derive(Subcommand)]
 enum Tasks {
 	Classification {
-		/// [training, inference]
+		/// [training|inference]
 		#[command(subcommand)]
 		phase: Phases,
 	}
@@ -21,11 +21,11 @@ enum Tasks {
 #[derive(Subcommand)]
 enum Phases {
 	Training {
-		/// [mnist, cifar]
+		/// [mnist|cifar]
 		#[arg(short, long)]
 		dataset: String,
 		
-		/// [lenet, alexnet]
+		/// [lenet|alexnet]
 		#[arg(short, long)]
 		model: String,
 
@@ -35,7 +35,7 @@ enum Phases {
 		#[arg(long, default_value_t = 128)]
 		batch_size: usize,
 
-		/// [sgd, adam]
+		/// [sgd|adam]
 		#[arg(short, long, default_value_t = String::from("sgd"))]
 		optimizer: String,
 		
@@ -48,16 +48,16 @@ enum Phases {
 		#[arg(long, default_value_t = 0.9)]
 		momentum: f32,
 
-		/// [constant, cosine]
+		/// [constant|cosine]
 		#[arg(long, default_value_t = String::from("cosine"))]
 		schedule: String,
 	},
 	Inference {
-		/// [mnist, cifar]
+		/// [mnist|cifar]
 		#[arg(short, long)]
 		dataset: String,
 		
-		/// [lenet, alexnet]
+		/// [lenet|alexnet]
 		#[arg(short, long)]
 		model: String,
 
