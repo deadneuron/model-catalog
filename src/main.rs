@@ -68,5 +68,19 @@ enum Phases {
 }
 
 fn main() {
-    let _args = Args::parse();
+    let args = Args::parse();
+
+	match args.task {
+		Tasks::Classification { phase } => {
+			println!("Classification");
+			match phase {
+				Phases::Training {..} => {
+					println!("Training");
+				}
+				Phases::Inference {..} => {
+					println!("Inference");
+				}
+			}
+		}
+	}
 }

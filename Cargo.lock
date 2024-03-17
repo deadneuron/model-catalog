@@ -1991,6 +1991,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "model-catalog"
+version = "0.1.0"
+dependencies = [
+ "burn",
+ "clap",
+]
+
+[[package]]
 name = "naga"
 version = "0.14.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4135,14 +4143,6 @@ dependencies = [
  "sha1",
  "time",
  "zstd",
-]
-
-[[package]]
-name = "zoo"
-version = "0.1.0"
-dependencies = [
- "burn",
- "clap",
 ]
 
 [[package]]
