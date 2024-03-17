@@ -17,7 +17,7 @@ clap = { version = "4.5.3", features = ["derive"] }
 
 ## Overview
 
-cargo run -- <task> <phase> <options>
+`cargo run -- <task> <phase> <options>`
 
 - `task` &mdash; [classification|~~regression~~]
 - `phase` &mdash; [training|inference]
