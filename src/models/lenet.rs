@@ -31,7 +31,7 @@ impl LeNetConfig {
     pub fn init<B: Backend>(&self, device: &B::Device) -> LeNet<B> {
         LeNet {
             conv1: Conv2dConfig::new([1, 6], [5, 5]).init(device),
-            conv2: Conv2dConfig::new([6, 16],[5, 5],).init(device),
+            conv2: Conv2dConfig::new([6, 16], [5, 5],).init(device),
             pool1: AdaptiveAvgPool2dConfig::new([14, 14]).init(),
             pool2: AdaptiveAvgPool2dConfig::new([5, 5]).init(),
             linear1: LinearConfig::new(16*5*5, 120).init(device),
